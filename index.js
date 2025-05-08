@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import multer from 'multer';
 import path from 'path';
-import sharp from 'sharp';
 import fs from 'node:fs';
 // import file from 'bun:file';
 
@@ -70,7 +69,7 @@ app.post('/submit', upload.single('image'), async (req, res) => {
 
     try {
         const uploadedImage = Bun.file(uploadedPath);
-        Bun.write(pngPath, uploadedImage);
+        await Bun.write(pngPath, uploadedImage);
 
         // Optionally delete original file if not PNG
         fs.unlinkSync(uploadedPath);
