@@ -4,6 +4,8 @@ FROM oven/bun:slim
 # Set working directory
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
 # Copy package.json and package-lock.json
 COPY package.json bun.lock ./
 
