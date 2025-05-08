@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<body>
+    <header class="d-flex justify-content-left py-3 navbar"> 
+        <ul class="nav"> 
+            <li class="nav-item me-3"><a href="/" class="nav-link  nav-item-det" >Home</a></li> 
+            <li class="nav-item me-3"><a href="/view-post" class="nav-link active nav-item-det" aria-current="page">View A Post</a></li> 
+        </ul>
+     </header>
+
+    <% if (locals.title && locals.content && locals.imagePath && locals.writerName) { %>
+        <h1 class="text-center mt-5 mb-5">Latest Post by <%= writerName %></h1>
+        <div class="container mb-5">
+            <div class="post">
+                <h2 class="mt-1 text-center"><%= title %></h2>
+                <hr class="line">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="/uploads/image.png" class="img-fluid rounded" alt="Blog image">
+                    </div>
+                    <div class="col-md-8 align-self-start">
+                    <p><%= content %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } else { %>
+        <h1 class="container text-center mt-5">No Posts Available</h1>
+    <% } %>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,103 @@
+/* Styles for the container */
+body {
+    height: 100vh;
+    /* margin-top: 60px; */
+    display: flex;
+    /* min-height: 100%; */
+    flex-direction: column;
+    /* padding-bottom: 60px; */
+    background-color: #25160f;
+}
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d9b285;
+    color: #000;
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    height: 60px;
+    font-family: "Tagesschrift", system-ui;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: #d9b285;
+    padding: 10px;
+    text-align: center;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.nav-item-det {
+    border: 1px solid #000;
+    color: #5b3d29;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Tagesschrift", system-ui;
+    font-style: normal;
+}
+
+.nav-link.active {
+    background-color: #ebdbc9;
+}
+
+.nav-det{
+    background-color: #d9b285;
+}
+
+h1 {
+    color: #ae673e;
+    font-size: 56px;
+    font-family: "Tagesschrift", system-ui;
+    font-style: normal;
+}
+
+
+.container {
+    /* display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-items: left; */
+    flex: 1;
+    /* height: 100%; */
+    width: 100%;
+    margin-bottom: 30px;
+    /* padding-bottom: 60px; */
+}
+
+.form-label{
+    color: #ae673e;
+    font-size: 30px;
+    font-family: "Tagesschrift", system-ui;
+    font-style: normal;
+}
+
+#wordCountMessage {
+    color: white !important;
+}
+
+.post {
+    background-color: #d9b285;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+h2 {
+    color: #ae673e;
+    font-size: 30px;
+    font-family: "Tagesschrift", system-ui;
+    font-style: normal;
+}
+
+.line{
+    border: 1px solid #000;
+    border-width: 2px;
+}
